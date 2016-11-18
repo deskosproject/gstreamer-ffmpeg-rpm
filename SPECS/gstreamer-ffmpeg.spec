@@ -1,6 +1,6 @@
 Name:           gstreamer-ffmpeg
 Version:        0.10.13
-Release:        15%{?dist}
+Release:        16%{?dist}
 Summary:        GStreamer FFmpeg-based plug-ins
 Group:          Applications/Multimedia
 # the ffmpeg plugin is LGPL, the postproc plugin is GPL
@@ -64,8 +64,8 @@ mv libav-0.8.17 gst-libs/ext/libav
 # Note no --with-system-ffmpeg *for now*, as gst-ffmpeg wants libav-0.8,
 # and the system ffmpeg is 0.11, which is more or less libav-0.9
 %configure --disable-dependency-tracking --disable-static \
-  --with-package-name="gst-plugins-ffmpeg rpmfusion rpm" \
-  --with-package-origin="http://rpmfusion.org/" \
+  --with-package-name="DeskOS GStreamer-ffmpeg package" \
+  --with-package-origin="https://deskosproject.org/" \
   --with-ffmpeg-extra-configure="--enable-runtime-cpudetect --arch=%{_target_cpu} --optflags=\\\"\\\$RPM_OPT_FLAGS\\\""
 make %{?_smp_mflags} V=1
 
@@ -83,6 +83,9 @@ rm $RPM_BUILD_ROOT%{_libdir}/gstreamer-0.10/libgst*.la
 
 
 %changelog
+* Thu Nov 17 2016 Ricardo Arguello <rarguello@deskosproject.org> - 0.10.13-16
+- Rebuilt for DeskOS
+
 * Sat May 16 2015 Hans de Goede <j.w.r.degoede@gmail.com> - 0.10.13-15
 - Upgrade the buildin libav to 0.8.17 to get all the security fixes from
   upstream libav

@@ -1,0 +1,6 @@
+= DeskOS: gstreamer-ffmpeg RPM
+
+This is the _gstreamer-ffmpeg_ RPM package for the *DeskOS* operating system.
+
+Upstream comes from the NUX Dextop 7:
+http://li.nux.ro/download/nux/dextop/el7/SRPMS/gstreamer-ffmpeg-0.10.13-15.el7.nux.src.rpm[gstreamer-ffmpeg-0.10.13-15.el7.nux.src.rpm]
